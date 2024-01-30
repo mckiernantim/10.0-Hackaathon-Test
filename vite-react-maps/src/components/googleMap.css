@@ -1,0 +1,12 @@
+ .googleMaps-ul {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+ }
+
+ .googleMaps-ul-li {
+    border:2px solid black;
+    background-color: antiquewhite;
+    padding:20px 20px;
+    box-shadow: 1px 1px 1px 10px grey;
+ }
