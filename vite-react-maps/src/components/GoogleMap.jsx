@@ -130,7 +130,7 @@ const MapComponent = () => {
     <div className="googleMaps-container">
        <h1>{ selectedPlace ? selectedPlace.name : null }</h1>
        <section>
-        {buttonOptions.map((option, ind) => <button key={ ind } value = { option } onClick={ (e) => handleSubmit(e) }> { option } </button>)}
+        {buttonOptions.map((option, ind) => <button key={ ind } value = { option } onClick={ handleSubmit() }> { option } </button>)}
         <form onSubmit={ handleSubmit }>
           <br />
           <label>Or find Some Food By Name</label>
