@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install:both": "cd vite-react-maps && npm install && cd ../maps-proxy-server && npm install"
   },
   "keywords": [],
   "author": "",

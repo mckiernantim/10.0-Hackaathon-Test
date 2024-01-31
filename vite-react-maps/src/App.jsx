@@ -1,5 +1,5 @@
 
-import  { MemoGoogleMap } from "./components/GoogleMap"
+import  { MemoGoogleMap } from "./components/googleMap/GoogleMap"
 import './App.css'
 
 

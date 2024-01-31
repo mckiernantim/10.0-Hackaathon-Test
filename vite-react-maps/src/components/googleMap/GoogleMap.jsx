@@ -1,13 +1,11 @@
 import React, { useEffect, useState, useRef } from "react";
-import Form from "./Form";
-import FromButtonGroup from "./FormButtonGroup"
+import Form from "../shared/form/Form";
 import MapResultList from "./MapResultList";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
+import { useUserLocation } from "../../hooks/useUserLocation";
+import { getUserLocation } from "../../utils/locationUtils";
+import { getGoogleMapsData } from "../../utils/apiUtils";
 import "./googleMap.css";
-import { useUserLocation } from "../hooks/useUserLocation";
-import { getUserLocation } from "../utils/locationUtils";
-import { getGoogleMapsData } from "../utils/apiUtils";
-import FormButtonGroup from "./FormButtonGroup";
 const API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
 
 const searchDistance = 1500;
@@ -23,16 +21,17 @@ const center = {
   lng: 74.644,
 };
 
-const searchButtons = ["Dessert", "Ice Cream", "Tacos", "Pizza", "Beer"];
 
 const MapComponent = () => {
   // state for the map center location
   const [mapCenter, setMapCenter] = useState(center);
   const [selectedPlace, setSelectedPlace] = useState(null);
   const [places, setPlaces] = useState([]);
-  // lets us track the value of the input without a rerender
-    // selected here so we can extend the input to google API
+ 
+  // Hook used to track dom state directly - removing the state from React 
+  //  selected here so we can extend the input to google API
   const inputRef = useRef();
+  // custom hook to check for broswer location data
   const { error, location } = useUserLocation();
   // effect on mount to see if we have userLocation available in the browser
   useEffect(() => {
@@ -75,9 +74,10 @@ const MapComponent = () => {
 
   return (
     <div className="googleMaps-container">
-      <h1>{selectedPlace ? selectedPlace.name : null}</h1>
+      <h1>Welcome to GRUB FINDER</h1>
+      <h2>Find Some Grub</h2>
+      <h3>{selectedPlace ? selectedPlace.name : null}</h3>
       <section className="googleMaps-form-container">
-        <FormButtonGroup buttonList={searchButtons} handleClick={handleSubmit} />
         <Form  handleSubmit={handleSubmit} inputRef={inputRef}/>
         {places.length ? <h2>Nearby Grub:</h2> : null}
         <MapResultList places={places}/>
