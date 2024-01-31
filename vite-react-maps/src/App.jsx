@@ -1,17 +1,17 @@
-import { useEffect, useState } from 'react'
-import  GoogleMap from "./components/GoogleMap"
+
+import  { MemoGoogleMap } from "./components/GoogleMap"
 import './App.css'
 
 
 function App() {
   return (
-    <>
       <main>
-        <GoogleMap />
+        <MemoGoogleMap />
       </main>
-    </>
-  )
-}
+    )
+  }
+    
+    
 
  
      
