@@ -92,9 +92,9 @@ In our Grub Finder project, we employ a combination of React hooks and utility f
 
 Why We Need an Express Proxy Server for CORS
 
-**CORS Issues:** Directly making requests to external APIs (like Google Maps) from the client-side can lead to Cross-Origin Resource Sharing (CORS) issues. This is a security feature in browsers that restricts web applications from making requests to a different domain than the one that served the web application.
-**Proxy Server Solution:** By setting up an Express server and making it act as a proxy, we can forward requests from our client-side application through this server. This way, the server makes API requests to Google Maps and returns the data to the client, effectively bypassing CORS restrictions.
+**CORS Issues:** 
+Directly making requests to external APIs (like Google Maps) from the client-side can lead to Cross-Origin Resource Sharing (CORS) issues. This is a security feature in browsers that restricts web applications from making requests to a different domain than the one that served the web application.
+**Proxy Server Solution:** 
+By setting up an Express server and making it act as a proxy, we can forward requests from our client-side application through this server. This way, the server makes API requests to Google Maps and returns the data to the client, effectively bypassing CORS restrictions.
 Hooks and Utility Functions for Data Fetching
-**Utility Functions:** We abstract our data fetching logic into utility functions for better organization and reusability.
-**getGoogleMapsData:** This function uses axios to make a POST request to our Express proxy server, which then retrieves data from the Google Maps API.
-**getUserLocation:** A function to obtain the user's current location. It returns a promise, accounting for the asynchronous nature of geolocation fetching
+
