@@ -16,20 +16,7 @@ Grub Finder is an interactive web application designed for a hackathon. It lever
 - Real-time geolocation tracking.
 - Optimized React components using advanced concepts like `useMemo` and `useRef`.
 
-## Folder Structure
-Below is the folder structure for the Grub Finder project, providing a clear and organized layout of the various components and utilities:
-```
-src/
-|-- components/ # React components
-| |-- Map.jsx # Map display component
-| |-- Search.jsx # Search bar component
-|-- hooks/ # Custom React hooks
-| |-- useUserLocation.jsx # Hook for user's geolocation
-|-- utils/ # Utility functions
-| |-- apiUtils.js # Utilities for API interactions
-| |-- locationUtils.js # Utilities for location-related functionalities
-```
-### This Structure Looks... Different
+## Folder Structure Looks... Different
 
 You may notice this project structured a bit differently from our previous projects.  As projects grow in complexity, as Capstone will, it is important we consider when to reuse code, and how to keep our files easily maintainable.
 
