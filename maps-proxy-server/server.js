@@ -13,16 +13,14 @@ app.use(cors());
 
 app.post("/", async (req, res) => {
     const timestamp = new Date()
-    console.log("post request received at " + timestamp )
-    console.log(req.body)
+    console.log("post request received at " + timestamp , " looking for " + req.body.query )
     try {
         const { location, distance, query } = req.body;
-        req.body.key = API_KEY;
         const queryString = `${BASE_API_URL}?location=${encodeURIComponent(location)}&radius=${distance}&keyword=${encodeURIComponent(query)}&key=${API_KEY}`;
         const mapsData = await axios.get(queryString);
         res.status(200).json(mapsData.data)
     } catch(err) {
-        console.log(console.error(err))
+        console.error(err)
         res.status(400).send(err)
     }
 
