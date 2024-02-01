@@ -88,7 +88,7 @@ export const MemoGoogleMap = React.memo(MapComponent);
     - It ensures that the map only updates when there are actual changes to its relevant props (like center or zoom), thus making our application more efficient.  Just like with our other components, we are considering how our app will grow when we approach our code writing.  
 
 ## Fetching Data and Express Proxy Server 
-In our Grub Finder project, we employ a combination of React hooks and utility functions to fetch data, and an Express proxy server to handle requests to external APIs, such as the Google Maps API. Below is an explanation for your README:
+In our Grub Finder project, we employ a combination of React hooks and utility functions to fetch data, and an Express proxy server to handle requests to external APIs, such as the Google Maps API.
 
 Why We Need an Express Proxy Server for CORS
 
