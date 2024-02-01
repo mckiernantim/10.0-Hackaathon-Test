@@ -94,10 +94,10 @@ Why We Need an Express Proxy Server for CORS
 
 **CORS Issues:** 
 
-Directly making requests to external APIs (like Google Maps) from the client-side can lead to Cross-Origin Resource Sharing (CORS) issues. This is a security feature in browsers that restricts web applications from making requests to a different domain than the one that served the web application.
+Directly making requests to external APIs (like Google Maps) from the client-side can lead to Cross-Origin Resource Sharing (CORS) issues (everyone's favorite). This is a security feature in browsers that restricts web applications from making requests to a different domain than the one that served the web application.
 
 **Proxy Server Solution:** 
 
 By setting up an Express server and making it act as a proxy, we can forward requests from our client-side application through this server. This way, the server makes API requests to Google Maps and returns the data to the client, effectively bypassing CORS restrictions.
-Hooks and Utility Functions for Data Fetching
+
 
